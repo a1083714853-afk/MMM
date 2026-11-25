@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammadaziz | Portfolio</title>
+  <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#home" class="logo">
+      <i class="fa-solid fa-code"></i>
+      <span>Muhammadaziz</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="hero" id="home">
+    <div class="hero-content">
+      <h1>Hi There,</h1>
+      <h2>I'm Muhammadaziz <span class="accent-letters">M M</span></h2>
+      <p class="role-line">
+        I Am Into <span class="typing-text" id="typingText">Web Development</span><span class="cursor">|</span>
+      </p>
+
+      <a href="#about" class="btn-about">
+        <span>About Me</span>
+        <i class="fa-solid fa-circle-arrow-down"></i>
+      </a>
+
+      <div class="socials">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="avatar-ring">
+        <img
+          src="./photo_2026-11-20_14-46-59.jpg"
+          alt="Developer avatar"
+          class="avatar-img"
+        />
+      </div>
+    </div>
+  </main>
+
+  <section class="about-section" id="about">
+    <h2 class="section-title">
+      <i class="fa-solid fa-user"></i> About <span>Me</span>
+    </h2>
+
+    <div class="about-container">
+      <div class="about-image">
+        <img src="./photo_2026-11-20_14-46-59.jpg" alt="Muhammadaziz Photo" />
+      </div>
+
+      <div class="about-content">
+        <h3>I'm Muhammadaziz</h3>
+        <span class="about-role">Full Stack Developer</span>
+        <p>
+          I am a passionate Web Developer with a strong interest in Frontend Design,
+          Responsive UI, and modern web technologies. I constantly strive to enhance
+          my coding skills and build clean, dynamic, and user-friendly web applications.
+          Currently, I am focused on developing real-world projects and expanding my
+          expertise in the tech world.
+        </p>
+
+        <div class="about-info">
+          <p><span>Email :</span> muhammadaziz@gmail.com</p>
+          <p><span>Place :</span> Tashkent, Uzbekistan</p>
+        </div>
+
+        <a href="#" class="btn-resume">
+          Resume <i class="fa-solid fa-chevron-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+  <div class="chat-widget">
+    <div class="chat-greeting">👋 Hi! How can we help?</div>
+    <div class="chat-options">
+      <button class="chat-pill" type="button">I have a question</button>
+      <button class="chat-pill" type="button">Tell me more</button>
+    </div>
+    <button class="chat-bubble" type="button" aria-label="Open chat">
+      <i class="fa-solid fa-comment-dots"></i>
+      <span class="chat-badge">10</span>
+    </button>
+  </div>
+
+  <a href="#home" class="scroll-top" aria-label="Scroll to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </a>
+
+  <script>
+    const phrases = [
+      "Web Development",
+      "Frontend Design",
+      "Responsive UI",
+      "Interactive Web"
+    ];
+    const typingEl = document.getElementById("typingText");
+    let phraseIndex = 0;
+    let charIndex = phrases[0].length;
+    let isDeleting = false;
+
+    function tick() {
+      const current = phrases[phraseIndex];
+
+      if (!isDeleting) {
+        charIndex++;
+        typingEl.textContent = current.slice(0, charIndex);
+        if (charIndex === current.length) {
+          isDeleting = true;
+          setTimeout(tick, 1600);
+          return;
+        }
+        setTimeout(tick, 90);
+      } else {
+        charIndex--;
+        typingEl.textContent = current.slice(0, charIndex);
+        if (charIndex === 0) {
+          isDeleting = false;
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+          setTimeout(tick, 350);
+          return;
+        }
+        setTimeout(tick, 55);
+      }
+    }
+
+    setTimeout(tick, 1800);
+  </script>
+  
+  <section class="skills-section" id="skills">
+    <h2 class="skills-title">
+      <i class="fa-solid fa-laptop-code"></i> Skills & <span>Abilities</span>
+    </h2>
+
+    <div class="skills-container">
+      <div class="skills-grid">
+   
+        <div class="skill-card">
+          <i class="devicon-react-original colored"></i>
+          <span>ReactJS</span>
+        </div>
+
+        <div class="skill-card">
+          <i class="devicon-express-original colored"></i>
+          <span>ExpressJS</span>
+        </div>
+
+        <div class="skill-card">
+          <i class="devicon-nodejs-plain-wordmark colored"></i>
+          <span>NodeJS</span>
+        </div>
+
+        <div class="skill-card">
+          <i class="devicon-bootstrap-plain colored"></i>
+          <span>Bootstrap</span>
+        </div>
+
+        <div class="skill-card">
+          <i class="devicon-html5-plain colored"></i>
+          <span>HTML5</span>
+        </div>
+
+        <div class="skill-card">
+          <i class="devicon-css3-plain colored"></i>
+          <span>CSS3</span>
+        </div>
+
+        <!-- 2-qator -->
+        <div class="skill-card">
+          <i class="devicon-javascript-plain colored"></i>
+          <span>JavaScript</span>
+        </div>
+
+        <div class="skill-card">
+          <i class="devicon-python-plain colored"></i>
+          <span>Python</span>
+        </div>
+ 
+        <div class="skill-card">
+          <i class="devicon-cplusplus-plain colored"></i>
+          <span>C++</span>
+        </div>
+
+        
+        <div class="skill-card">
+          <i class="devicon-mongodb-plain colored"></i>
+          <span>MongoDB</span>
+        </div>
+
+        <div class="skill-card">
+          <i class="devicon-mysql-plain-wordmark colored"></i>
+          <span>MySQL</span>
+        </div>
+
+        <div class="skill-card">
+          <i class="devicon-postgresql-plain colored"></i>
+          <span>PostgreSQL</span>
+        </div>
+
+        <!-- 3-qator -->
+        <div class="skill-card">
+          <i class="devicon-jquery-plain colored"></i>
+          <span>jQuery</span>
+        </div>
+
+
+        <div class="skill-card">
+          <i class="devicon-git-plain colored"></i>
+          <span>Git VCS</span>
+        </div>
+
+        <div class="skill-card">
+          <i class="devicon-github-original"></i>
+          <span>GitHub</span>
+        </div>
+
+        <div class="skill-card">
+          <i class="devicon-c-plain colored"></i>
+          <span>C</span>
+        </div>
+
+        <div class="skill-card">
+          <i class="devicon-figma-plain colored"></i>
+          <span>Figma</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="education-section" id="education">
+    <h2 class="education-title">
+      <i class="fa-solid fa-graduation-cap"></i> My <span>Education</span>
+    </h2>
+    <p class="education-quote">
+      Education Is What Remains After One Has Forgotten What One Has Learned In School.
+    </p>
+
+    <div class="education-list">
+      <div class="education-card">
+        <div class="education-img">
+          <img
+            src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80"
+            alt="University campus"
+          />
+        </div>
+        <div class="education-info">
+          <h3>Bachelor Of Engineering In Computer Science</h3>
+          <p class="institution">R N Shetty Institute Of Technology</p>
+          <p class="edu-status">2023-2027 | <span>Pursuing</span></p>
+        </div>
+      </div>
+
+      <div class="education-card">
+        <div class="education-img">
+          <img
+            src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&q=80"
+            alt="School building"
+          />
+        </div>
+        <div class="education-info">
+          <h3>Jawahar Navodaya Vidyalaya</h3>
+          <p class="institution">Chikkamagalur | CBSE</p>
+          <p class="edu-status">2016-2023 | <span>Completed</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="gallery-section" id="gallery">
+    <h2 class="gallery-title">
+      <i class="fa-solid fa-images"></i> My <span>Gallery</span>
+    </h2>
+    <p class="gallery-subtitle">
+      Snapshots from projects, interfaces, and development milestones.
+    </p>
+
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <img
+          src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=700&q=80"
+          alt="Portfolio Interface"
+        />
+        <div class="gallery-caption">
+          <h4>Portfolio UI</h4>
+          <span>Web Design</span>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img
+          src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=700&q=80"
+          alt="Hackathon Project"
+        />
+        <div class="gallery-caption">
+          <h4>Hackathon Build</h4>
+          <span>Full Stack</span>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img
+          src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=700&q=80"
+          alt="Code & Tools"
+        />
+        <div class="gallery-caption">
+          <h4>Utility Tools</h4>
+          <span>JavaScript</span>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img
+          src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=700&q=80"
+          alt="Movie Discovery App"
+        />
+        <div class="gallery-caption">
+          <h4>Movie Discovery</h4>
+          <span>Frontend</span>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=700&q=80"
+          alt="E-Learning Platform"
+        />
+        <div class="gallery-caption">
+          <h4>EduSphere Platform</h4>
+          <span>MERN Stack</span>
+        </div>
+      </div>
+ 
+      
+      <div class="gallery-card">
+        <img
+          src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=700&q=80"
+          alt="Development Workspace"
+        />
+        <div class="gallery-caption">
+          <h4>Dev Workspace</h4>
+          <span>Workflow</span>
+        </div>
+      </div>
+    </div>
+  </section>
+<section class="contact-section" id="contact">
+    <h2 class="contact-title">
+      <i class="fa-solid fa-headset"></i> Get In <span>Touch</span>
+    </h2>
+
+    <div class="contact-card">
+      <div class="contact-illustration">
+        <img src="./image.png" alt="Customer support illustration" />
+      </div>
+
+      <form class="contact-form" action="#" method="post">
+        <div class="input-group">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" name="name" placeholder="Name" required />
+        </div>
+
+        <div class="input-group">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" name="email" placeholder="Email" required />
+        </div>
+
+        <div class="input-group">
+          <i class="fa-solid fa-phone-flip"></i>
+          <input type="tel" name="phone" placeholder="Phone" />
+        </div>
+
+        <div class="input-group textarea-group">
+          <i class="fa-solid fa-comment-dots"></i>
+          <textarea name="message" placeholder="Message" rows="4" required></textarea>
+        </div>
+
+        <div class="contact-actions">
+          <button type="submit" class="btn-submit">
+            Submit <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <footer class="footer-section">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Muhammadaziz's Portfolio</h3>
+        <p>
+          Thank you for visiting my personal portfolio website. Connect with me over socials.
+        </p>
+        <p>
+          Keep Rising 🚀. Connect with me over live chat!
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#home"><i class="fa-solid fa-circle-chevron-right"></i> Home</a></li>
+          <li><a href="#about"><i class="fa-solid fa-circle-chevron-right"></i> About</a></li>
+          <li><a href="#skills"><i class="fa-solid fa-circle-chevron-right"></i> Skills</a></li>
+          <li><a href="#education"><i class="fa-solid fa-circle-chevron-right"></i> Education</a></li>
+          <li><a href="#projects"><i class="fa-solid fa-circle-chevron-right"></i> Projects</a></li>
+          <li><a href="#gallery"><i class="fa-solid fa-circle-chevron-right"></i> Gallery</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact Info</h3>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-phone"></i> <span>+998 90 123 45 67</span></li>
+          <li><i class="fa-solid fa-envelope"></i> <span>muhammadaziz@gmail.com</span></li>
+          <li><i class="fa-solid fa-location-dot"></i> <span>Tashkent, Uzbekistan</span></li>
+        </ul>
+
+        <div class="footer-socials">
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="mailto:muhammadaziz@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Designed With <span class="heart">♥</span> By <span>Muhammadaziz</span></p>
+    </div>
+  </footer>
+</body>
+</html>
